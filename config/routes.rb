@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     scope module: :api do
       scope module: :v1 do
         controller "boards" do
-          GET "/boards/generate", action: :create, as: :create_board
+          POST "/boards/generate", action: :create, as: :create_board
         end
       end
     end
