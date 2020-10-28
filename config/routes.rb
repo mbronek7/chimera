@@ -5,5 +5,15 @@ Rails.application.routes.draw do
   alias PATCH patch
   alias DELETE delete
 
+  scope constraints: {format: /json/}, defaults: {format: :json} do
+    scope module: :api do
+      scope module: :v1 do
+        controller "boards" do
+          GET "/boards/generate", action: :create, as: :create_board
+        end
+      end
+    end
+  end
+
   GET "/*a", to: "application#not_found"
 end
