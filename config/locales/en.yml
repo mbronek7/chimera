@@ -9,3 +9,10 @@ en:
     unauthorized:
       title: Unauthorized
       detail: Wrong email or password
+  activerecord:
+    errors:
+      models:
+        boards:
+          attributes:
+            board_properties:
+              invalid_json: "Invalid Board properties, strips is required one."
