@@ -10,4 +10,5 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  require_relative "./integration_test_helper"
 end
