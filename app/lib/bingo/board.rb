@@ -1,4 +1,4 @@
-class BingoBoard
+class Bingo::Board
   def self.generate
     columns = get_columns
     add_blanks(columns)

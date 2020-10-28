@@ -1,4 +1,4 @@
-class  Api::V1::BoardsControllerTest < ApplicationIntegrationTest
+class Api::V1::BoardsControllerTest < ApplicationIntegrationTest
   test "client can generate new board" do
     POST create_board_url(format: :json)
     assert response.code, equal: OK

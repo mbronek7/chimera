@@ -11,6 +11,9 @@ Rails.application.routes.draw do
         controller "boards" do
           POST "api/v1/boards/generate", action: :create, as: :create_board
         end
+        controller "results" do
+          GET "api/v1/results/:board_id", action: :show, as: :show_results
+        end
       end
     end
   end

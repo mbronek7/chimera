@@ -8,6 +8,6 @@
 class Board < ApplicationRecord
   JSON_SCHEMA = Rails.root.join("app", "models", "schemas", "board.json").to_s
 
-  store_accessor :product_attributes, %w[strips]
+  store_accessor :board_properties, %w[strips]
   validates :board_properties, presence: true, json: { schema: JSON_SCHEMA }
 end
