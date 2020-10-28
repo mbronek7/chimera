@@ -1,7 +1,7 @@
 class BingoBoard
   def self.generate
     columns = get_columns
-    add_blanks(columns).to_json
+    add_blanks(columns)
   end
 
   private_class_method def self.get_columns

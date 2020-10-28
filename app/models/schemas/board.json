@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "strips": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "contains": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3
+      }
+    }
+  },
+  "required": [
+    "strips"
+  ]
+}
