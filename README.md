@@ -1,6 +1,7 @@
 # Chimera Workshops
 [![Ruby](https://img.shields.io/badge/ruby-2.7.2-brightgreen.svg)](https://www.ruby-lang.org/en/news/2020/10/02/ruby-2-7-2-released/)
 [![Rails](https://img.shields.io/badge/rails-6.0.3.4-brightgreen.svg)](https://rubygems.org/gems/rails/versions/6.0.3.4)
+[![App CI Status](https://github.com/mbronek7/chimera/workflows/test/badge.svg)](https://github.com/mbronek7/chimera/actions)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -70,6 +71,10 @@ docker-compose run app rails db:migrate
 5. Manually run annotate
 ```sh
 docker-compose run app bundle exec annotate --models
+```
+6. Create Serializer
+```sh
+docker-compose run app rails g serializer Model attribute attribute attribute
 ```
 <!-- API DOCUMENTATION -->
 ## API DOCUMENTATION
