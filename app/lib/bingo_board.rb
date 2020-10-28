@@ -8,7 +8,7 @@ class BingoBoard
     columns = Array.new(9, nil)
     columns[0] = 1.upto(9).to_a
     1.upto(7).each do |j|
-      columns[j] = (10 * j).upto((10 * (j + 1))-1).to_a
+      columns[j] = (10 * j).upto((10 * (j + 1)) - 1).to_a
     end
     columns[8] = 80.upto(90).to_a
     columns
