@@ -78,3 +78,84 @@ docker-compose run app rails g serializer Model attribute attribute attribute
 ```
 <!-- API DOCUMENTATION -->
 ## API DOCUMENTATION
+
+* [Boards](#boards)
+  * [Generate](#generate)
+
+
+<!-- Boards -->
+## Boards
+
+Bingo 1 to 90 Boards (Naive Version - 3 rows x 9 columns)
+
+<!-- Generate -->
+### Generate
+```
+POST /api/v1/boards
+
+Params
+{
+}
+
+Response
+{
+  {
+   "data":{
+      "id":"1",
+      "type":"board",
+      "attributes":{
+         "id"=>1,
+         "board_properties":{
+            "strips":[
+               [
+                  "nil",
+                  8,
+                  "nil"
+               ],
+               [
+                  12,
+                  11,
+                  "nil"
+               ],
+               [
+                  "nil",
+                  20,
+                  28
+               ],
+               [
+                  "nil",
+                  37,
+                  33
+               ],
+               [
+                  "nil",
+                  48,
+                  49
+               ],
+               [
+                  57,
+                  "nil",
+                  59
+               ],
+               [
+                  67,
+                  "nil",
+                  63
+               ],
+               [
+                  "nil",
+                  75,
+                  "nil"
+               ],
+               [
+                  85,
+                  88,
+                  "nil"
+               ]
+            ]
+         }
+      }
+   }
+}
+}
+```
