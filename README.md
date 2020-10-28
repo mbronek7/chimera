@@ -81,6 +81,7 @@ docker-compose run app rails g serializer Model attribute attribute attribute
 
 * [Boards](#boards)
   * [Generate](#generate)
+  * [Check Results](#check-results)
 
 
 <!-- Boards -->
@@ -157,5 +158,30 @@ Response
       }
    }
 }
+}
+```
+<!-- Check Results -->
+### Check Results
+```
+
+GET api/v1/results/:board_id
+
+Params
+{
+   "board_id": "integer",
+   "numbers":"[integer]"
+}
+Response
+when user won game:
+{
+   "status":"ok",
+   "code":"ok",
+   "result":"WIN"
+}
+or when user lost game:
+{
+   "status":"ok",
+   "code":"ok",
+   "result":"LOST"
 }
 ```
