@@ -1,8 +1,9 @@
 class Api::V1::BoardsController < Api::V1::BaseController
 
   def create
-    board = Board.create board_properties: {strips: Bingo::Board.generate}
-    render_record(serializer, board)
+    board_ids = GenerateBoardsService.generate(params[:number].to_i)
+    boards = Board.where(id: board_ids)
+    render json: serializer.new(boards).serializable_hash
   end
 
   private
